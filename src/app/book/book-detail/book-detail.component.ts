@@ -15,11 +15,13 @@ export class BookDetailComponent {
     required: true
   })
   detail: BookDetail | null = null;
+  
   @Output()
   chooseBookEvent = new EventEmitter<BookDetail>();
 
   onSelectBook(book: BookDetail) {
     this.chooseBookEvent.emit(book);
+
   }
 
 }
