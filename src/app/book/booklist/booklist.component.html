@@ -1,7 +1,9 @@
-<p>booklist works!</p>
-@for (book of bookDetails; track $index) {
-    <app-book-detail [detail]="book"></app-book-detail>
-}
+<div id="bookContainer">
+    @for (book of bookDetails; track $index) {
+        <app-book-detail (chooseBookEvent)="onBookSelected($event)" [detail]="book"></app-book-detail>
+    }
+</div>
+
 
 
 
